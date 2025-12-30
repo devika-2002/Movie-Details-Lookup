@@ -1,0 +1,67 @@
+Movie Details Lookup
+Problem Statement
+Your cousin is a huge movie and TV fan. They often forget when a movie came out or who starred in it, 
+so they want a simple webpage where they can type a movie or series name and instantly see its details.
+
+The page should let them enter a movie or series name, click a Search button, and view the main details for that one title on the screen.
+
+You will use a real public API to fetch this information.
+
+API Information
+You must use the OMDb API (The Open Movie Database).
+
+Website & documentation: http://www.omdbapi.com/
+You need to register on the website to get your own API key.
+Before you start coding, open the documentation page and figure out:
+
+Which URL parameter lets you search by exact title (for one movie/series).
+How to include your API key in the URL.
+Which JSON fields you want to show (for example: title, year, type, poster, rating, plot).
+Testing and Debugging
+To fully understand the challenge, you should follow these two steps:
+
+Use Postman to learn how the API behaves
+Send a test request to the API endpoint.
+Check the response to understand which fields you will receive.
+This helps you understand what your request and response will look like before writing any code.
+Build and test your project locally
+Write your code on your local computer using an index.html and script.js file.
+Open your HTML file in the browser to test your interface and API calls.
+Use DevTools effectively:
+Sources tab: to debug your JavaScript step by step and inspect variables.
+Network tab: to see each request your page makes, what data was sent, and what response came back.
+
+
+Your Task
+Create a webpage with:
+An input box where the user can type a movie or series name.
+A Search button.
+A details section that already contains separate elements for each piece of information:
+One element to display the title.
+One element to display the year.
+One element to display the type.
+One element to display the IMDb rating.
+One element (such as a div) to hold the poster image.
+One element to display the plot summary.
+An area to display error messages.
+When the page first loads:
+The details elements should be empty.
+The error area should be empty.
+No API call is made automatically.
+When the user clicks the Search button:
+Read the text from the input box and trim extra spaces.
+Clear any old details and error messages.
+If the input is empty, show an error message such as: "Please enter a movie or series name." and do not call the API.
+If there is a title, use it to make an API call to the OMDb API using fetch().
+After the API response:
+If the movie or series is not found, show an error message such as: "Movie or series not found." and leave the details elements empty.
+If the data is valid, fill the details elements for one movie or series with exactly:
+Title
+Year
+Type (movie/series)
+Poster image, or a message saying "No poster available" if the value is "N/A"
+IMDb rating
+Plot summary
+Error handling:
+Any error during the fetch process, such as network issues or unexpected JSON structure, 
+should be shown in the error area instead of leaving the page blank or broken. The details elements should be cleared when this happens.
